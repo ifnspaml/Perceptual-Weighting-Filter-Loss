@@ -24,7 +24,7 @@ In this project, instead of applying the commonly used mean squared error (MSE) 
 
 ### Datasets
 
-Note that in this project the clean speech signals are from [Grid corpous](https://doi.org/10.1121/1.2229005) dataset (downsampled to 16 kHz) and noise signals are from [ChiMe-3](https://ieeexplore.ieee.org/abstract/document/7404837/) dataset. In order to run the scripts in this project, the abovementioned two datasets are assumed to be available locally and placed under the directory of `./Audio Data/grid coupus 16khz/.` and `./Audio Data/16khz noise/.`, respectively.
+Note that in this project the clean speech signals are from [Grid corpous](https://doi.org/10.1121/1.2229005) dataset (downsampled to 16 kHz) and noise signals are from [ChiMe-3](https://ieeexplore.ieee.org/abstract/document/7404837/) dataset. In order to run the scripts in this project, the abovementioned two datasets are assumed to be available locally and placed under the directory of `./Audio Data/grid coupus 16khz/.` and `./Audio Data/16khz noise/.`, respectively (see `GitHubTrain_part_1_CleanAndNoisyMixture.m` for the detailed directory structure of the datasets).
 
 ### Training and validation data preparation
 
