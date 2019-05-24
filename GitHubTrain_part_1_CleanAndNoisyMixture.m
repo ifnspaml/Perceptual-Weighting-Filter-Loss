@@ -17,7 +17,7 @@
 %                                    (for part 3 usage)
 %
 % 
-% Technische Universit‰t Braunschweig
+% Technische Universit√§t Braunschweig
 % Institute for Communications Technology (IfN)
 % Schleinitzstrasse 22
 % 38106 Braunschweig
@@ -49,7 +49,7 @@ fram_shift = fram_leng/2; % frame shift
 freq_coeff_leng = fram_shift + 1; % half-plus-one frequency coefficients
 
 % --- Input directories
-database_dir = '.\Audio Data\grid coupus 16khz\';
+database_dir = '.\Audio Data\grid corpus 16khz\';
 noise_dir_1 = '.\Audio Data\16khz noise\ped\BGD_150211_040_PED.CH2.wav'; % 32 mins
 noise_dir_2 = '.\Audio Data\16khz noise\street\BGD_150211_030_STR.CH2.wav';% 26 mins
 noise_dir_3 = '.\Audio Data\16khz noise\cafe\cafe1\BGD_150204_030_CAF.CH5.wav';% 30 mins
@@ -76,7 +76,7 @@ train_sspeech_dir = '.\train\speech_clean_s_speech.mat';
 train_clean_dir = '.\train\speech_fft_abs_clean_6snrs.mat'; 
 train_mixture_dir = '.\train\mixture_fft_abs_6snrs.mat';
 
-%% Read clean speech and produce frequency amplitudes 
+%% Read clean speech and produce frequency amplitudes
 % --- Loop for loading clean speech 
 s1 = cell(1,1);
 num1 = 0;
