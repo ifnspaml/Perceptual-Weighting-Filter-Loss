@@ -1,6 +1,6 @@
 # perceptual-weighting-filter-loss
 
-Please find here the scripts referring to the paper [A Perceptual Weighting Filter Loss for DNN Training in Speech Enhancement](https://arxiv.org/abs/1905.09754). In this repository we provide the source code for training/validation data preparation (including the frequency amplitude response for the perceptual weighting filter), network training/validation (including the proposed perceptual weighting filter loss), network inference, and enhanced speech waveform reconstruction. 
+Please find here the scripts referring to the paper [A Perceptual Weighting Filter Loss for DNN Training in Speech Enhancement](https://arxiv.org/submit/2702128/view). In this repository we provide the source code for training/validation data preparation (including the frequency amplitude response for the perceptual weighting filter), network training/validation (including the proposed perceptual weighting filter loss), network inference, and enhanced speech waveform reconstruction. 
 
 The code was written by [Ziyue Zhao](https://ziyuezhao.github.io/) and some of the contributions are from Ziyi Xu. 
 
