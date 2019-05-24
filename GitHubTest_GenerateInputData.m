@@ -19,7 +19,7 @@
 %             y_phase, s_phase, n_phase : phase information
 %
 % 
-% Technische Universit‰t Braunschweig
+% Technische Universit√§t Braunschweig
 % Institute for Communications Technology (IfN)
 % Schleinitzstrasse 22
 % 38106 Braunschweig
@@ -49,8 +49,8 @@ fram_leng = 256; % window length
 fram_shift = fram_leng/2; % frame shift
 freq_coeff_leng = fram_shift + 1; % half-plus-one frequency coefficients
 
-% --- Deirctories 
-database_dir = '.\Audio Data\grid coupus 16khz\';
+% --- Directories 
+database_dir = '.\Audio Data\grid corpus 16khz\';
 database_noi_dir = '.\Audio Data\16khz noise\';
 subdirs = cell(1,1);
 subdirs{1} = 's17\';
