@@ -1,6 +1,6 @@
 # Perceptual-Weighting-Filter-Loss
 
-Please find here the scripts referring to the paper [A Perceptual Weighting Filter Loss for DNN Training in Speech Enhancement](https://arxiv.org/submit/2702128/view). In this repository we provide the source code for training/validation data preparation (including the frequency amplitude response for the perceptual weighting filter), network training/validation (including the proposed perceptual weighting filter loss), network inference, and enhanced speech waveform reconstruction. 
+Please find here the scripts referring to the paper [A Perceptual Weighting Filter Loss for DNN Training in Speech Enhancement](https://arxiv.org/pdf/1905.09754.pdf). In this repository we provide the source code for training/validation data preparation (including the frequency amplitude response for the perceptual weighting filter), network training/validation (including the proposed perceptual weighting filter loss), network inference, and enhanced speech waveform reconstruction. 
 
 The code was written by [Ziyue Zhao](https://ziyuezhao.github.io/) and some of the contributions are from Ziyi Xu. 
 
@@ -24,7 +24,7 @@ In this project, instead of applying the commonly used mean squared error (MSE) 
 
 ### Datasets
 
-Note that in this project the clean speech signals are from [Grid corpous](https://doi.org/10.1121/1.2229005) dataset (downsampled to 16 kHz) and noise signals are from [ChiMe-3](https://ieeexplore.ieee.org/abstract/document/7404837/) dataset. In order to run the scripts in this project, the abovementioned two datasets are assumed to be available locally and placed under the directory of `./Audio Data/grid coupus 16khz/.` and `./Audio Data/16khz noise/.`, respectively (see `GitHubTrain_part_1_CleanAndNoisyMixture.m` for the detailed directory structure of the datasets).
+Note that in this project the clean speech signals are from [Grid corpus](https://doi.org/10.1121/1.2229005) dataset (downsampled to 16 kHz) and noise signals are from [ChiMe-3](https://ieeexplore.ieee.org/abstract/document/7404837/) dataset. In order to run the scripts in this project, the abovementioned two datasets are assumed to be available locally and placed under the directory of `./Audio Data/grid coupus 16khz/.` and `./Audio Data/16khz noise/.`, respectively (see `GitHubTrain_part_1_CleanAndNoisyMixture.m` for the detailed directory structure of the datasets).
 
 ### Training and validation data preparation
 
