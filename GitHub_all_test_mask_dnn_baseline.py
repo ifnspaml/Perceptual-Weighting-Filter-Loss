@@ -36,14 +36,11 @@ from keras.models import Model
 from keras.layers import *
 from keras import backend as K
 import keras.optimizers as optimizers
-import numpy as np
 from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, CSVLogger, TensorBoard, LearningRateScheduler
 import keras.callbacks as cbs
-from numpy import random
 import matplotlib.pyplot as plt
 import scipy.io as sio
 import scipy.io.wavfile as swave
-from sklearn import preprocessing
 import math
 import time
 from tensorflow.python.framework import ops
