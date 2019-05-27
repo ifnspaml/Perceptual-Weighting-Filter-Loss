@@ -8,8 +8,19 @@ function count = saveshort( A, filename )
 %           filename : Name of file data will be written to
 %           count    : Number elements that have been written to file
 %
-% Technische Universit‰t Braunschweig, IfN, 2006 - 09 - 26
+% Technische Universit√§t Braunschweig
+% Institute for Communications Technology (IfN)
+% Schleinitzstrasse 22
+% 38106 Braunschweig
+% Germany
+% 2006 - 09 - 26
 % (c) Prof. Dr.-Ing. Tim Fingscheidt
+% 
+% Use is permitted for any scientific purpose when citing the paper:
+% Z. Zhao, S. Elshamy, and T. Fingscheidt, "A Perceptual Weighting Filter 
+% Loss for DNN Training in Speech Enhancement", arXiv preprint arXiv: 
+% 1905.09754.
+%
 %--------------------------------------------------------------------------
 
 infid = fopen(filename,'wb');
