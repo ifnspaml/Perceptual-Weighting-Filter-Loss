@@ -223,12 +223,12 @@ for k_model_type = 1 : length(modle_type_str_vec)
         
         % -- Save files or not
         if save_files_flag == 1
-            saveshort(s_hat_temp,['./generated_files/test_data/s_hat_test_data_snr_' num2str(noi_lev) '_model_' noi_situ_model_str '_' modle_type_str '_' num2str(k) '.raw']);
-            saveshort(s_tilt_temp,['./generated_files/test_data/s_tilde_test_data_snr_' num2str(noi_lev) '_model_' noi_situ_model_str '_' modle_type_str '_' num2str(k) '.raw']);
-            saveshort(n_tilt_temp,['./generated_files/test_data/n_tilde_test_data_snr_' num2str(noi_lev) '_model_' noi_situ_model_str '_' modle_type_str '_' num2str(k) '.raw']);
-            saveshort(y_vec_temp,['./generated_files/test_data/y_test_data_snr_' num2str(noi_lev) '_' num2str(k) '.raw']);
-            saveshort(s_vec_temp,['./generated_files/test_data/s_' num2str(k) '.raw']);
-            saveshort(n_vec_temp,['./generated_files/test_data/n_test_data_snr_' num2str(noi_lev) '_' num2str(k) '.raw']);
+            saveshort(s_hat_temp,['./generated_files/s_hat_test_data_snr_' num2str(noi_lev) '_model_' noi_situ_model_str '_' modle_type_str '_' num2str(k) '.raw']);
+            saveshort(s_tilt_temp,['./generated_files/s_tilde_test_data_snr_' num2str(noi_lev) '_model_' noi_situ_model_str '_' modle_type_str '_' num2str(k) '.raw']);
+            saveshort(n_tilt_temp,['./generated_files/n_tilde_test_data_snr_' num2str(noi_lev) '_model_' noi_situ_model_str '_' modle_type_str '_' num2str(k) '.raw']);
+            saveshort(y_vec_temp,['./generated_files/y_test_data_snr_' num2str(noi_lev) '_' num2str(k) '.raw']);
+            saveshort(s_vec_temp,['./generated_files/s_' num2str(k) '.raw']);
+            saveshort(n_vec_temp,['./generated_files/n_test_data_snr_' num2str(noi_lev) '_' num2str(k) '.raw']);
         end
         
         % -- Possible white- and black-box measurements here ...
