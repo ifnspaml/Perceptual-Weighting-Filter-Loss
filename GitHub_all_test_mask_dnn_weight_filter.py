@@ -149,7 +149,7 @@ for k_snr in range(0, len(SNR_situ_array)):
     learning_rate = 5e-4
     adam_wn = Adam(lr=learning_rate, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
     model.compile(optimizer=adam_wn, loss='mean_squared_error', metrics=['accuracy'])
-    model.load_weights("./training results/mask_dnn_weight_filter_" + filter_type_str + "_" + noi_situ_model_str+ "_weights_negA.h5")
+    model.load_weights("./training results/mask_dnn_weight_filter_" + filter_type_str + "_" + noi_situ_model_str+ "_weights.h5")
 
     #####################################################################################
     # 2. load data
