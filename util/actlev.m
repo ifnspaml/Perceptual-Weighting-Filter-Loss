@@ -18,8 +18,19 @@
 %				gain	:	Gain factor to normalize to given dBov by -lev
 %							parameter
 %
-% Technische Universit‰t Braunschweig, IfN, 2015 - 11 - 12
+% Technische Universit√§t Braunschweig
+% Institute for Communications Technology (IfN)
+% Schleinitzstrasse 22
+% 38106 Braunschweig
+% Germany
+% 2015 - 11 - 12
 % Samy Elshamy, M.Sc.
 %
 % This file is part of the SV Matlab Toolbox!
+% 
+% Use is permitted for any scientific purpose when citing the paper:
+% Z. Zhao, S. Elshamy, and T. Fingscheidt, "A Perceptual Weighting Filter 
+% Loss for DNN Training in Speech Enhancement", arXiv preprint arXiv: 
+% 1905.09754.
+%
 %--------------------------------------------------------------------------
