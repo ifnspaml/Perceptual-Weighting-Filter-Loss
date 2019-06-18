@@ -10,9 +10,10 @@ In this project, instead of applying the commonly used mean squared error (MSE) 
 
 ## Prerequisites
 
-- [Python](https://www.python.org/) 3 (tested in Python version 3.6)
-- CPU or NVIDIA GPU + [CUDA CuDNN](https://developer.nvidia.com/cudnn)
 - [Matlab](https://www.mathworks.com/)
+- [Python](https://www.python.org/) 3.6
+- CPU or NVIDIA GPU + [CUDA CuDNN](https://developer.nvidia.com/cudnn)
+
 
 ## Getting Started
 
@@ -24,15 +25,15 @@ In this project, instead of applying the commonly used mean squared error (MSE) 
 
 ### Datasets
 
-Note that in this project the clean speech signals are from [Grid corpus](https://doi.org/10.1121/1.2229005) dataset (downsampled to 16 kHz) and noise signals are from [ChiMe-3](https://ieeexplore.ieee.org/abstract/document/7404837/) dataset. In order to run the scripts in this project, the abovementioned two datasets are assumed to be available locally and placed under the directory of `./Audio Data/grid corpus 16khz/` and `./Audio Data/16khz noise/`, respectively (see `GitHubTrain_part_1_CleanAndNoisyMixture.m` for the detailed directory structure of the datasets).
+Note that in this project the clean speech signals are taken from the [Grid corpus](https://doi.org/10.1121/1.2229005) (downsampled to 16 kHz) and noise signals are taken from the [ChiMe-3](https://ieeexplore.ieee.org/abstract/document/7404837/) database. In order to run the scripts in this project, the abovementioned two databases are assumed to be available locally and placed under the directory of `./Audio Data/grid corpus 16khz/` and `./Audio Data/16khz noise/`, respectively (see `GitHubTrain_part_1_CleanAndNoisyMixture.m` for the detailed directory structure of the datasets).
 
 ### Training and validation data preparation
 
- - Run the Matlab script to generate the frame-wise frequency amplitudes for clean and noisy speech under various SNRs: 
+ - Run the Matlab script to generate the frame-wise amplitudes for clean and noisy speech under various SNRs: 
 ```bash
 matlab GitHubTrain_part_1_CleanAndNoisyMixture.m
 ```
- - Run the Matlab script to generate the frame-wise frequency amplitude response for the perceptual weighting filter:
+ - Run the Matlab script to generate the frame-wise amplitude response for the perceptual weighting filter:
 ```bash
 matlab GitHubTrain_part_2_WghFilterResponse.m
 ```
@@ -79,7 +80,7 @@ python GitHub_all_test_mask_dnn_baseline.py
 matlab GitHubTest_GenerateAudioFiles.m
 ```
 
-Note that the frame-wise frequency amplitude response for the perceptual weighting filter is only needed in the DNN training, not in the DNN inference. That means the proposed loss function can be advantageously applied to an existing DNN-based speech enhancement system, without changing the DNN topology or speech enhancement framework.
+Note that the frame-wise amplitude response for the perceptual weighting filter is only needed in the DNN training, not in the DNN inference. That means the proposed loss function can be advantageously applied to an existing DNN-based speech enhancement system, without changing the DNN topology or speech enhancement framework.
 
 ## Citation
 
