@@ -6,7 +6,7 @@ The code was written by [Ziyue Zhao](https://ziyuezhao.github.io/) and some of t
 
 ## Introduction
 
-In this project, instead of applying the commonly used mean squared error (MSE) as the loss function during DNN training for single-channel speech enhancement, we design a perceptual weighting filter loss. The proposed loss is motivated by the perceptual weighting filter in analysis-by-synthesis speech coding, e.g., in code-excited linear prediction (CELP). The proposed approach outperforms the reference DNN trained with MSE loss in terms of better PESQ and higher noise attenuation.
+In this project, instead of applying the commonly used mean squared error (MSE) as the loss function during DNN training for single-channel speech enhancement, we designed a perceptual weighting filter loss. The proposed loss is motivated by the perceptual weighting filter in analysis-by-synthesis speech coding, e.g., in code-excited linear prediction (CELP). The proposed approach outperforms the reference DNN trained with MSE loss in terms of better PESQ and higher noise attenuation.
 
 ## Prerequisites
 
