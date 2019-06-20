@@ -1,6 +1,6 @@
 # Perceptual Weighting Filter Loss
 
-Please find here the scripts referring to the paper [A Perceptual Weighting Filter Loss for DNN Training in Speech Enhancement](https://arxiv.org/pdf/1905.09754.pdf). In this repository we provide the source code for training/validation data preparation (including the frequency amplitude response for the perceptual weighting filter), network training/validation (including the proposed perceptual weighting filter loss), network inference, and enhanced speech waveform reconstruction. 
+Please find here the scripts referring to the paper [A Perceptual Weighting Filter Loss for DNN Training in Speech Enhancement](https://arxiv.org/pdf/1905.09754.pdf). In this repository we provide the source code for training/validation data preparation (including the amplitude response for the perceptual weighting filter), network training/validation (including the proposed perceptual weighting filter loss), network inference, and enhanced speech waveform reconstruction. 
 
 The code was written by [Ziyue Zhao](https://ziyuezhao.github.io/) and some of the contributions are from Ziyi Xu. 
 
@@ -29,11 +29,11 @@ Note that in this project the clean speech signals are taken from the [Grid corp
 
 ### Training and validation data preparation
 
- - Run the Matlab script to generate the frame-wise amplitudes for clean and noisy speech under various SNRs: 
+ - Run the Matlab script to generate the frame-wise spectral amplitudes for clean and noisy speech under various SNRs: 
 ```bash
 matlab GitHubTrain_part_1_CleanAndNoisyMixture.m
 ```
- - Run the Matlab script to generate the frame-wise amplitude response for the perceptual weighting filter:
+ - Run the Matlab script to generate the frame-wise spectral amplitudes response for the perceptual weighting filter:
 ```bash
 matlab GitHubTrain_part_2_WghFilterResponse.m
 ```
@@ -80,7 +80,7 @@ python GitHub_all_test_mask_dnn_baseline.py
 matlab GitHubTest_GenerateAudioFiles.m
 ```
 
-Note that the frame-wise amplitude response for the perceptual weighting filter is only needed in the DNN training, not in the DNN inference. That means the proposed loss function can be advantageously applied to an existing DNN-based speech enhancement system, without changing the DNN topology or speech enhancement framework.
+Note that the frame-wise amplitudes response for the perceptual weighting filter is only needed in the DNN training, not in the DNN inference. That means the proposed loss function can be advantageously applied to an existing DNN-based speech enhancement system, without changing the DNN topology or speech enhancement framework.
 
 ## Citation
 
