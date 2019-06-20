@@ -96,4 +96,4 @@ If you use the scripts in your research, please cite
 }
 ```
 ## Acknowledgements
-- The author would like to thank Maximilian Strake for the advice concerning the construction of the project in GitHub.
+- The author would like to thank Maximilian Strake and Samy Elshamy for the advice concerning the construction of the project in GitHub.
