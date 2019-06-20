@@ -10,16 +10,16 @@ In this project, instead of applying the commonly used mean squared error (MSE) 
 
 ## Prerequisites
 
-- [Matlab](https://www.mathworks.com/)
+- [Matlab](https://www.mathworks.com/) 2014a or later
 - [Python](https://www.python.org/) 3.6
-- CPU or NVIDIA GPU + [CUDA CuDNN](https://developer.nvidia.com/cudnn)
+- CPU or NVIDIA GPU + [CUDA](https://developer.nvidia.com/cuda-toolkit) 9.0 [CuDNN](https://developer.nvidia.com/cudnn) 7.0.5
 
 
 ## Getting Started
 
 ### Installation
 
-- Install [TensorFlow](https://www.tensorflow.org/) and [Keras](https://www.tensorflow.org/)
+- Install [TensorFlow](https://www.tensorflow.org/) 1.5.0 and [Keras](https://www.tensorflow.org/) 2.1.4
 - Some Python packages need to be installed, please see detailed information in the Python scripts.
 - Install [Matlab](https://www.mathworks.com/)
 
