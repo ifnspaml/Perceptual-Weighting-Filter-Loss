@@ -53,10 +53,10 @@ freq_coeff_leng = fram_shift + 1; % half-plus-one frequency coefficients
 database_dir = '.\Audio Data\grid corpus 16khz\';
 database_noi_dir = '.\Audio Data\16khz noise\';
 subdirs = cell(1,1);
-subdirs{1} = 's17\';
-subdirs{2} = 's18\';
-subdirs{3} = 's19\';
-subdirs{4} = 's20\';
+subdirs{1} = 's17\'; % s13 in original dataset
+subdirs{2} = 's18\'; % s14 in original dataset
+subdirs{3} = 's19\'; % s22 in original dataset
+subdirs{4} = 's20\'; % s23 in original dataset
 
 % -- Use all noise types per SNR
 s_mat = [];
