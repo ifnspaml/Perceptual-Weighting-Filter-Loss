@@ -87,12 +87,15 @@ Note that the frame-wise amplitudes response for the perceptual weighting filter
 If you use the scripts in your research, please cite
 
 ```
-@article{zhao2019perceptual,
-  author =  {Z. Zhao and S. Elshamy and T. Fingscheidt},
-  title =   {{A Perceptual Weighting Filter Loss for DNN Training in Speech Enhancement}},
-  journal = {arXiv preprint arXiv: 1905.09754},
-  year =    {2019},
-  month =   may
+@InProceedings{zhao2019perceptual,
+  author =    {Z. Zhao and S. Elshamy and T. Fingscheidt},
+  title =     {{A Perceptual Weighting Filter Loss for DNN Training in Speech Enhancement}},
+  booktitle = {Proc. of WASPAA},
+  year =      {2019},
+  pages =     {224--228},
+  address =   {New Paltz, NY, USA},
+  month =     oct,
+  keywords =  {Speech enhancement, deep neural networks, speech coding}
 }
 ```
 ## Acknowledgements
