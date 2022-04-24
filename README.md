@@ -4,24 +4,24 @@ Please find here the scripts referring to the paper [A Perceptual Weighting Filt
 
 The code was written by [Ziyue Zhao](https://ziyuezhao.github.io/) and some of the contributions are from Ziyi Xu. 
 
+## LATEST
+Some Python code is updated to match the TensorFlow 2 (the original code was written for TensorFlow 1). See Prerequisites for detailed information about how to start.
+
 ## Introduction
 
 In this project, instead of applying the commonly used mean squared error (MSE) as the loss function during DNN training for single-channel speech enhancement, we designed a perceptual weighting filter loss. The proposed loss is motivated by the perceptual weighting filter in analysis-by-synthesis speech coding, e.g., in code-excited linear prediction (CELP). The proposed approach outperforms the reference DNN trained with MSE loss in terms of better PESQ and higher noise attenuation.
 
-## Prerequisites
+## Prerequisites and Installation
 
-- [Matlab](https://www.mathworks.com/) 2014a or later
-- [Python](https://www.python.org/) 3.6
-- CPU or NVIDIA GPU + [CUDA](https://developer.nvidia.com/cuda-toolkit) 9.0 [CuDNN](https://developer.nvidia.com/cudnn) 7.0.5
+ - Nvidia GPU with CUDA and CuDNN (the code is tested with CUDA version 11.4)
+ - Install [Anaconda](https://www.anaconda.com/)
+ - Start Anaconda Prompt
+ - Create a new environment and activate: `conda create -n tf-gpu-new python=3.8.5`, `conda activate tf-gpu-new`
+ - Install TensorFlow-GPU and Scipy:`pip install -r tensorflow-gpu==2.4.1`, `pip install -r scipy`
+ - Install [Matlab](https://www.mathworks.com/) (the code is tested with MATLAB 2016 and later)
 
 
 ## Getting Started
-
-### Installation
-
-- Install [TensorFlow](https://www.tensorflow.org/) 1.5.0 and [Keras](https://www.tensorflow.org/) 2.1.4
-- Some Python packages need to be installed, please see detailed information in the Python scripts.
-- Install [Matlab](https://www.mathworks.com/)
 
 ### Datasets
 
