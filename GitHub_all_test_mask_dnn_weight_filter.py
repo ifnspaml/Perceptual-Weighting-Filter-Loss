@@ -31,24 +31,12 @@ np.random.seed(1337)  # for reproducibility
 from numpy import random
 import os
 import tensorflow as tf
-from keras.engine.topology import Layer
-from keras.models import Model
-from keras.layers import *
-from keras import backend as K
-import keras.optimizers as optimizers
-from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, CSVLogger, TensorBoard, LearningRateScheduler
-import keras.callbacks as cbs
-import matplotlib.pyplot as plt
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import *
+from tensorflow.keras import backend as K
+import tensorflow.keras.optimizers as Adam
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, CSVLogger, TensorBoard, LearningRateScheduler
 import scipy.io as sio
-import scipy.io.wavfile as swave
-import math
-import time
-from tensorflow.python.framework import ops
-from keras.backend.tensorflow_backend import set_session
-import h5py
-from keras.optimizers import Adam
-from sklearn import preprocessing
-from keras.constraints import maxnorm
 
 
 def reshapeDataMatrix(data_matrix, look_backward=1, look_forward=2):

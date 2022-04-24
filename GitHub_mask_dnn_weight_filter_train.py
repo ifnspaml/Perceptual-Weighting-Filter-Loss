@@ -32,24 +32,14 @@ np.random.seed(1337)  # for reproducibility
 from numpy import random
 import os
 import tensorflow as tf
-from keras.engine.topology import Layer
-from keras.models import Model
-from keras.layers import *
-from keras import backend as K
-import keras.optimizers as optimizers
-from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, CSVLogger, TensorBoard, LearningRateScheduler
-import keras.callbacks as cbs
-import matplotlib.pyplot as plt
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import *
+from tensorflow.keras import backend as K
+import tensorflow.keras.optimizers as Adam
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, CSVLogger, TensorBoard, LearningRateScheduler
 import scipy.io as sio
-import scipy.io.wavfile as swave
-from sklearn import preprocessing
-import math
-import time
-from tensorflow.python.framework import ops
-from keras.backend.tensorflow_backend import set_session
 import h5py
-from keras.optimizers import Adam
-from keras.constraints import maxnorm
+import time
 
 #####################################################################################
 # 0. Settings
@@ -252,19 +242,19 @@ model.compile(optimizer=adam_wn, loss='mean_squared_error', metrics=['accuracy']
 #####################################################################################
 
 # Stop training after 16 epoches if the vali_loss not decreasing
-stop_str = cbs.EarlyStopping(monitor='val_loss', patience=16, verbose=1, mode='auto')
+stop_str = EarlyStopping(monitor='val_loss', patience=16, verbose=1, mode='auto')
 # Reduce learning rate when stop improving lr = lr*factor
-reduce_LR = cbs.ReduceLROnPlateau(monitor='val_loss', factor=0.6, patience=2, verbose=1, mode='auto', epsilon=0.0001, cooldown=0, min_lr=0)
+reduce_LR = ReduceLROnPlateau(monitor='val_loss', factor=0.6, patience=2, verbose=1, mode='auto', epsilon=0.0001, cooldown=0, min_lr=0)
 # Only save the best model
 best_weights = "./training results/mask_dnn_weight_filter_" + filter_type_str + "_" + SNR_situ+ "_weights.h5"
 best_weights = os.path.normcase(best_weights)
-model_save = cbs.ModelCheckpoint(best_weights, monitor='val_loss', save_best_only=True, mode='auto', save_weights_only=True, period=1)
+model_save = ModelCheckpoint(best_weights, monitor='val_loss', save_best_only=True, mode='auto', save_weights_only=True, period=1)
 # Start to fit model
 start = time.time()
 print("> Training model " + "using Batch-size: " + str(batch_size) + ", Learning_rate: " + str(learning_rate) + "...")
-hist = model.fit([x_train_noisy,x_train_noisy_aux,x_train_noisy_h,f_train_wfac], x_train_filt_wfac, epochs=nb_epochs, verbose=2, batch_size=batch_size, shuffle=True, initial_epoch=0,
+hist = model.fit(x=[x_train_noisy,x_train_noisy_aux,x_train_noisy_h,f_train_wfac], y=x_train_filt_wfac, epochs=nb_epochs, verbose=2, batch_size=batch_size, shuffle=True, initial_epoch=0,
                       callbacks=[reduce_LR, stop_str, model_save],
-                      validation_data=[[x_train_noisy_vali,x_train_noisy_vali_aux,x_train_noisy_vali_h,f_vali_wfac], x_train_vali_filt_wfac]
+                      validation_data=([x_train_noisy_vali,x_train_noisy_vali_aux,x_train_noisy_vali_h,f_vali_wfac], x_train_vali_filt_wfac)
                       )
 # Save validation loss
 ValiLossVec='./training results/mask_dnn_weight_filter_' + filter_type_str + "_" + 'validationloss.mat'
