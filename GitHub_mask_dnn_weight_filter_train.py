@@ -82,75 +82,69 @@ print('> Loading data... ')
 # Load Input Data
 print('  >> Loading input data... ')
 mat_input = "./training data/training_input_" + SNR_situ + ".mat"
-file_h5py_train_input = h5py.File(mat_input,'r')
-x_train_noisy = file_h5py_train_input.get('training_input')
-x_train_noisy = np.array(x_train_noisy)  # For converting to numpy array
-x_train_noisy = np.transpose(x_train_noisy)
+mat_input = os.path.normcase(mat_input)
+x_train_noisy = sio.loadmat(mat_input)
+x_train_noisy = x_train_noisy['training_input']
 x_train_noisy = reshapeDataMatrix(x_train_noisy, look_backward=LOOK_BACKWARD, look_forward=LOOK_FORWARD)
 print('     Input data shape: %s' % str(x_train_noisy.shape))
 
 # Load Input Data for Validation
 print('  >> Loading input validation data... ')
 mat_input_vali = "./training data/validation_input_" + SNR_situ + ".mat"
-file_h5py_vali_input = h5py.File(mat_input_vali,'r')
-x_train_noisy_vali = file_h5py_vali_input.get('validation_input')
-x_train_noisy_vali = np.array(x_train_noisy_vali)
-x_train_noisy_vali = np.transpose(x_train_noisy_vali)
+mat_input_vali = os.path.normcase(mat_input_vali)
+x_train_noisy_vali = sio.loadmat(mat_input_vali)
+x_train_noisy_vali = x_train_noisy_vali['validation_input']
 x_train_noisy_vali = reshapeDataMatrix(x_train_noisy_vali, look_backward=LOOK_BACKWARD, look_forward=LOOK_FORWARD)
 print('     Input validation data shape: %s' % str(x_train_noisy_vali.shape))
 
 # Load auxiliary input
 print('  >> Loading auxiliary input data... ')
 mat_input_aux = "./training data/training_input_unnorm_" + SNR_situ + ".mat"
-file_h5py_train_input_aux = h5py.File(mat_input_aux,'r')
-x_train_noisy_aux = file_h5py_train_input_aux.get('training_input')
-x_train_noisy_aux = np.array(x_train_noisy_aux)  # For converting to numpy array
-x_train_noisy_aux = np.transpose(x_train_noisy_aux)
+mat_input_aux = os.path.normcase(mat_input_aux)
+x_train_noisy_aux = sio.loadmat(mat_input_aux)
+x_train_noisy_aux = x_train_noisy_aux['training_input']
 print('     Input auxiliary data shape: %s' % str(x_train_noisy_aux.shape))
 
 # Load auxiliary input Data for Validation
 print('  >> Loading auxiliary input validation data... ')
 mat_input_vali_aux = "./training data/validation_input_unnorm_" + SNR_situ + ".mat"
-file_h5py_vali_input_aux = h5py.File(mat_input_vali_aux,'r')
-x_train_noisy_vali_aux = file_h5py_vali_input_aux.get('validation_input')
-x_train_noisy_vali_aux = np.array(x_train_noisy_vali_aux)
-x_train_noisy_vali_aux = np.transpose(x_train_noisy_vali_aux)
+mat_input_vali_aux = os.path.normcase(mat_input_vali_aux)
+x_train_noisy_vali_aux = sio.loadmat(mat_input_vali_aux)
+x_train_noisy_vali_aux = x_train_noisy_vali_aux['validation_input']
 print('     Input auxiliary validation data shape: %s' % str(x_train_noisy_vali_aux.shape))
 
 # Load Target Data
 print('  >> Loading target data... ')
 mat_target = "./training data/training_target_" + SNR_situ + ".mat"
-training_target = h5py.File(mat_target,'r')
-x_train = training_target.get('training_target')
-x_train = np.array(x_train)
-x_train = np.transpose(x_train)
+mat_target = os.path.normcase(mat_target)
+x_train = sio.loadmat(mat_target)
+x_train = x_train['training_target']
 print('     Target data shape: %s' % str(x_train.shape))
 
 # Load Target Data for Validation
 print('  >> Loading target validation data... ')
 mat_target_vali = "./training data/validation_target_" + SNR_situ + ".mat"
-mat_target_vali = h5py.File(mat_target_vali,'r')
-x_train_vali = mat_target_vali.get('validation_target')
-x_train_vali = np.array(x_train_vali)
-x_train_vali = np.transpose(x_train_vali)
+mat_target_vali = os.path.normcase(mat_target_vali)
+x_train_vali = sio.loadmat(mat_target_vali)
+x_train_vali = x_train_vali['validation_target']
 print('     Target validation data shape: %s' % str(x_train_vali.shape))
 
 # Load weighting filter frequency response frame-wise for training data
 print('  >> Loading weighting filter frequency response for training data... ')
 mat_input_h = "./training data/h_fft_abs_half_mat_" + filter_type_str + "_train_" + SNR_situ + ".mat"
-file_h5py_train_input_h = h5py.File(mat_input_h,'r')
-x_train_noisy_h = file_h5py_train_input_h.get('h_filt_input')
+mat_input_h = os.path.normcase(mat_input_h)
+x_train_noisy_h = sio.loadmat(mat_input_h)
+x_train_noisy_h = x_train_noisy_h['h_filt_input']
 x_train_noisy_h = np.array(x_train_noisy_h)  # For converting to numpy array
-x_train_noisy_h = np.transpose(x_train_noisy_h)
 print('     Weighting filter shape for training: %s' % str(x_train_noisy_h.shape))
 
 # Load weighting filter frequency response frame-wise for validation data
 print('  >> Loading weighting filter frequency response for validation data... ')
 mat_input_h = "./training data/h_fft_abs_half_mat_" + filter_type_str + "_validation_" + SNR_situ+ ".mat"
-file_h5py_vali_input_h = h5py.File(mat_input_h,'r')
-x_train_noisy_vali_h = file_h5py_vali_input_h.get('h_filt_vali_input')
+mat_input_h = os.path.normcase(mat_input_h)
+x_train_noisy_vali_h = sio.loadmat(mat_input_h)
+x_train_noisy_vali_h = x_train_noisy_vali_h['h_filt_vali_input']
 x_train_noisy_vali_h = np.array(x_train_noisy_vali_h)  # For converting to numpy array
-x_train_noisy_vali_h = np.transpose(x_train_noisy_vali_h)
 print('     Weighting filter shape for validation: %s' % str(x_train_noisy_vali_h.shape))
 
 # Prepare weighting factors for frequency bins in loss: As only half-plus-one frequency bins are input to NN, loss is

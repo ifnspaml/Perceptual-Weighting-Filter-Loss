@@ -17,7 +17,7 @@
 %                                  bins, num. of frames)
 %                  
 %
-% Technische Universität Braunschweig
+% Technische Universitï¿½t Braunschweig
 % Institute for Communications Technology (IfN)
 % Schleinitzstrasse 22
 % 38106 Braunschweig
@@ -85,4 +85,4 @@ for k = 1 : size(a_lpc,1)
 end
 
 % --- Save weighting filter coeff.
-save(train_wgh_filter_dir,'h_fft_abs_half_mat','-v7.3')
+save(train_wgh_filter_dir,'h_fft_abs_half_mat')

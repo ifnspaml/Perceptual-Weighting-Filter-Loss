@@ -27,7 +27,7 @@
 %             statistics
 %
 % 
-% Technische Universität Braunschweig
+% Technische Universitï¿½t Braunschweig
 % Institute for Communications Technology (IfN)
 % Schleinitzstrasse 22
 % 38106 Braunschweig
@@ -151,8 +151,8 @@ for data_type_k = 1 : length(data_type_str_vec)
         clear validation_input_raw training_input_raw
 
         % --- save auxiliary input
-        save(train_data_unnorm_input_dir,'training_input','-v7.3');
-        save(valid_data_unnorm_input_dir,'validation_input','-v7.3');
+        save(train_data_unnorm_input_dir,'training_input');
+        save(valid_data_unnorm_input_dir,'validation_input');
 
         % --- Normalization of the input data
         mean_training = mean(training_input,1);
@@ -172,8 +172,8 @@ for data_type_k = 1 : length(data_type_str_vec)
         end
 
         % --- save main input
-        save(train_data_input_dir,'training_input','-v7.3');
-        save(valid_data_input_dir,'validation_input','-v7.3');
+        save(train_data_input_dir,'training_input');
+        save(valid_data_input_dir,'validation_input');
         save(train_data_mean_dir,'mean_training');
         save(train_data_std_dir,'std_training');
 
@@ -271,11 +271,11 @@ for data_type_k = 1 : length(data_type_str_vec)
         clear validation_target_raw training_target_raw
 
         % --- Save all data
-        save(train_data_target_dir,'training_target','-v7.3');
-        save(valid_data_target_dir,'validation_target','-v7.3');
+        save(train_data_target_dir,'training_target');
+        save(valid_data_target_dir,'validation_target');
 
-        save(train_data_wgh_filter_dir,'h_filt_input','-v7.3');
-        save(valid_data_wgh_filter_dir,'h_filt_vali_input','-v7.3');
+        save(train_data_wgh_filter_dir,'h_filt_input');
+        save(valid_data_wgh_filter_dir,'h_filt_vali_input');
 
     end
 end

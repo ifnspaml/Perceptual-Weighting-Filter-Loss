@@ -145,8 +145,8 @@ for jj=1:num_frame
 end
 
 % --- Save the clean speech frequency amplitude (129 coeff. from 256 FFT points)
-save(train_clean_dir,'speech_fft_abs_clean','-v7.3')
-save(train_sspeech_dir,'s_speech','-v7.3');
+save(train_clean_dir,'speech_fft_abs_clean');
+save(train_sspeech_dir,'s_speech');
 clear s_speech
 
 %% Read noise and produce frequency amplitudes for mixture
@@ -219,7 +219,7 @@ for jj = 1:l_process
 end
 
 % --- Save mixture
-save(train_mixture_dir,'mixture_fft_abs','-v7.3')
+save(train_mixture_dir,'mixture_fft_abs');
 
 
 
