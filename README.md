@@ -27,6 +27,8 @@ In this project, instead of applying the commonly used mean squared error (MSE) 
 
 Note that in this project the clean speech signals are taken from the [Grid corpus](https://doi.org/10.1121/1.2229005) (downsampled to 16 kHz) and noise signals are taken from the [ChiMe-3](https://ieeexplore.ieee.org/abstract/document/7404837/) database. In order to run the scripts in this project, the abovementioned two databases are assumed to be available locally and placed under the directory of `./Audio Data/grid corpus 16khz/` and `./Audio Data/16khz noise/`, respectively (see `GitHubTrain_part_1_CleanAndNoisyMixture.m` for the detailed directory structure of the datasets).
 
+Note that the Grid Corpus is available [here](http://spandh.dcs.shef.ac.uk/avlombard/), while the [ChiMe-3 dataset](http://spandh.dcs.shef.ac.uk/chime_challenge/chime2015/data.html#Download) is only distributed via the LDC as [LDC2017S24](https://catalog.ldc.upenn.edu/LDC2017S24). For the data, there exist open-source options, e.g., [QUT-NOISE](https://research.qut.edu.au/saivt/databases/qut-noise-databases-and-protocols/), [DNS Challenge](https://github.com/microsoft/DNS-Challenge), etc. However, to use other data sets are out of the scope of this paper and repo. 
+
 ### Training and validation data preparation
 
  - Run the Matlab script to generate the frame-wise spectral amplitudes for clean and noisy speech under various SNRs: 
